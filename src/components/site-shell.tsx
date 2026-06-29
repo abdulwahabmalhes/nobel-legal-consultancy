@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check, Mail, Menu, MessageCircle, Send, Sparkles, X } from "lucide-react";
+import { Check, Menu, MessageCircle, Send, Sparkles, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/lib/site-data";
@@ -16,16 +16,16 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#171012]/90 py-3 text-white backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#10090b]/92 py-2 text-white backdrop-blur-xl">
         <div className="section-shell flex items-center justify-between">
-          <Link href="/" className="relative h-16 w-24 shrink-0" aria-label="NOBEL Legal Consultancy home">
+          <Link href="/" className="relative h-20 w-28 shrink-0 rounded-2xl bg-white/96 p-2 shadow-[0_18px_45px_rgba(0,0,0,.34)] ring-1 ring-white/25 md:h-24 md:w-32" aria-label="NOBEL Legal Consultancy home">
             <Image
               src="/images/nobel-logo-transparent.png"
               alt="NOBEL Legal Consultancy"
               fill
               priority
-              sizes="96px"
-              className="object-contain"
+              sizes="128px"
+              className="object-contain p-2"
             />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
@@ -42,7 +42,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <Button asChild size="sm" variant="light" className="hidden lg:inline-flex">
-            <Link href="/contact#consultation">BOOK A CONSULTATION</Link>
+            <Link href="/contact#consultation">FREE CONSULTATION</Link>
           </Button>
           <button onClick={() => setOpen(true)} className="grid size-11 place-items-center rounded-full border border-white/20 lg:hidden" aria-label="Open menu">
             <Menu className="size-5" />
@@ -64,7 +64,7 @@ export function SiteHeader() {
                   </motion.div>
                 ))}
               </nav>
-              <Button asChild size="lg"><Link href="/contact#consultation" onClick={() => setOpen(false)}>Book a Consultation</Link></Button>
+              <Button asChild size="lg"><Link href="/contact#consultation" onClick={() => setOpen(false)}>Free Consultation</Link></Button>
             </div>
           </motion.div>
         )}
@@ -78,13 +78,13 @@ export function SiteFooter() {
     <footer className="bg-[#151515] pt-20 text-white">
       <div className="section-shell grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_1fr_1fr]">
           <div>
-            <div className="relative h-48 w-40">
+            <div className="relative h-56 w-44 rounded-3xl bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,.42)]">
               <Image
                 src="/images/nobel-logo-transparent.png"
                 alt="NOBEL Legal Consultancy"
                 fill
-                sizes="160px"
-                className="object-contain"
+                sizes="176px"
+                className="object-contain p-4"
               />
             </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/42">Strategic legal guidance for businesses and individuals across the UAE.</p>
@@ -131,7 +131,7 @@ export function FloatingActions() {
                 <label className="form-label">Email or phone<input required className="form-field" /></label>
                 <label className="form-label">Your inquiry<textarea required rows={7} className="form-field resize-none py-4" /></label>
                 <Button type="submit" size="lg">Submit Inquiry <Send className="size-4" /></Button>
-                {sent && <p className="flex items-center gap-2 text-sm font-semibold text-[#6a001a]"><Check className="size-4" /> Inquiry received.</p>}
+                {sent && <p className="flex items-center gap-2 text-sm font-semibold text-[#4a0012]"><Check className="size-4" /> Inquiry received.</p>}
               </form>
             </motion.aside>
           </motion.div>

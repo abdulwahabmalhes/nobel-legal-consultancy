@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "Excellence Defined by Law",
     type: "website",
     locale: "en_AE",
-    images: ["/images/hero-enhanced.png"],
+    images: ["/images/boardroom.png"],
   },
   robots: { index: true, follow: true },
 };

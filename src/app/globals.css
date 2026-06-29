@@ -3,7 +3,7 @@
 :root {
   --background: #f7f6f3;
   --foreground: #1c1c1c;
-  --burgundy: #6a001a;
+  --burgundy: #4a0012;
   --silver: #c0c0c0;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 ::selection {
-  background: #6a001a;
+  background: #4a0012;
   color: #fff;
 }
 
@@ -52,7 +52,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: #7b0b28;
+  color: #4a0012;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -106,7 +106,7 @@ body {
 }
 
 .form-field:focus {
-  border-color: #6a001a;
+  border-color: #4a0012;
 }
 
 @media (prefers-reduced-motion: reduce) {
