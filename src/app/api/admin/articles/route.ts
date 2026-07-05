@@ -121,7 +121,17 @@ export async function DELETE(request: Request) {
   }
 
   try {
-    const { slug } = (await request.json()) as { slug?: string };
+    const url = new URL(request.url);
+    let slug = url.searchParams.get("slug") || "";
+
+    if (!slug) {
+      try {
+        const body = (await request.json()) as { slug?: string };
+        slug = body.slug || "";
+      } catch {
+        slug = "";
+      }
+    }
 
     if (!slug) {
       return NextResponse.json({ message: "Missing article slug." }, { status: 400 });

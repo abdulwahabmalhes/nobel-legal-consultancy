@@ -149,13 +149,12 @@ export default function ArticleDashboardPage() {
     setState({ status: "loading" });
 
     try {
-      const response = await fetch("/api/admin/articles", {
+      const response = await fetch(`/api/admin/articles?slug=${encodeURIComponent(article.slug)}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
           "x-admin-password": password,
         },
-        body: JSON.stringify({ slug: article.slug }),
       });
       const result = (await response.json()) as { message?: string };
 
@@ -202,7 +201,7 @@ export default function ArticleDashboardPage() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-xs font-bold tracking-[0.18em] text-white/60">CURRENT ARTICLES</h2>
-                <button onClick={resetForm} className="inline-flex items-center gap-2 text-xs font-semibold text-[#dfadba]">
+                <button type="button" onClick={resetForm} className="inline-flex items-center gap-2 text-xs font-semibold text-[#dfadba]">
                   <Plus className="size-4" />
                   New
                 </button>
@@ -217,11 +216,11 @@ export default function ArticleDashboardPage() {
                     <h3 className="mt-2 text-sm font-semibold leading-5 text-white">{article.title}</h3>
                     <p className="mt-1 text-xs text-white/35">{article.date}</p>
                     <div className="mt-3 flex gap-2">
-                      <button onClick={() => editArticle(article)} className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-2 text-xs font-semibold text-white">
+                      <button type="button" onClick={() => editArticle(article)} className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-2 text-xs font-semibold text-white">
                         <Edit3 className="size-3" />
                         Edit
                       </button>
-                      <button onClick={() => deleteArticle(article)} className="inline-flex items-center gap-1 rounded-full bg-red-500/15 px-3 py-2 text-xs font-semibold text-red-200">
+                      <button type="button" onClick={() => deleteArticle(article)} className="inline-flex items-center gap-1 rounded-full bg-red-500/15 px-3 py-2 text-xs font-semibold text-red-200">
                         <Trash2 className="size-3" />
                         Delete
                       </button>
