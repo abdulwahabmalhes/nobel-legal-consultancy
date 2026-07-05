@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#4a0012] py-24 text-white">
+      <section className="bg-[#11090b] py-24 text-white">
         <div className="section-shell grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
           <ImagePanel src="/images/hassan-al-wazir.jpeg" alt="Hassan Al Wazir" className="aspect-square" />
           <Reveal><p className="font-display text-3xl leading-[1.5] md:text-4xl">“Our commitment is not only to deliver professional consultancy services, but to become a trusted strategic partner for every client we serve.”</p><p className="mt-8 text-sm font-semibold tracking-[0.14em] text-white/55">HASSAN AL WAZIR · SENIOR LEGAL CONSULTANT</p></Reveal>
