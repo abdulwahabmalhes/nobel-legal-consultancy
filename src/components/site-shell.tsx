@@ -18,14 +18,14 @@ export function SiteHeader() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#10090b]/92 py-2 text-white backdrop-blur-xl">
         <div className="section-shell flex items-center justify-between">
-          <Link href="/" className="relative h-20 w-28 shrink-0 rounded-2xl bg-white/96 p-2 shadow-[0_18px_45px_rgba(0,0,0,.34)] ring-1 ring-white/25 md:h-24 md:w-32" aria-label="NOBEL Legal Consultancy home">
+          <Link href="/" className="relative h-16 w-28 shrink-0 overflow-hidden rounded-2xl bg-[#202322] shadow-[0_18px_45px_rgba(0,0,0,.34)] ring-1 ring-white/15 md:h-20 md:w-32" aria-label="NOBEL Legal Consultancy home">
             <Image
-              src="/images/nobel-logo-transparent.png"
+              src="/images/nobel-logo-silver.png"
               alt="NOBEL Legal Consultancy"
               fill
               priority
-              sizes="128px"
-              className="object-contain p-2"
+              sizes="176px"
+              className="object-contain"
             />
           </Link>
           <nav className="hidden items-center gap-7 lg:flex">
@@ -78,13 +78,13 @@ export function SiteFooter() {
     <footer className="bg-[#151515] pt-20 text-white">
       <div className="section-shell grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_1fr_1fr]">
           <div>
-            <div className="relative h-56 w-44 rounded-3xl bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,.42)]">
+            <div className="relative h-64 w-full max-w-md overflow-hidden rounded-3xl bg-[#202322] shadow-[0_24px_80px_rgba(0,0,0,.42)] ring-1 ring-white/10">
               <Image
-                src="/images/nobel-logo-transparent.png"
+                src="/images/nobel-logo-silver.png"
                 alt="NOBEL Legal Consultancy"
                 fill
-                sizes="176px"
-                className="object-contain p-4"
+                sizes="384px"
+                className="object-contain"
               />
             </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/42">Strategic legal guidance for businesses and individuals across the UAE.</p>
