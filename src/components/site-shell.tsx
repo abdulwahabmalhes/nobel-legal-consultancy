@@ -96,7 +96,7 @@ export function SiteFooter() {
           <h3 className="text-xs font-bold tracking-[0.16em] text-white/72">CONTACT</h3>
           <div className="mt-6 space-y-4 text-sm leading-6 text-white/42">
             <p>SPC Free Zone<br />Sharjah, UAE</p>
-            <a href="tel:+971552270676" className="block hover:text-white">+971 55 227 0676</a>
+            <a href="tel:+97165504556" className="block hover:text-white">+971 6 550 4556</a>
             <a href="mailto:info@nobellegal.ae" className="block hover:text-white">info@nobellegal.ae</a>
           </div>
         </div>
